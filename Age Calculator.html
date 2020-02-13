@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>Converting age</title>
+</head>
+<body>
+    <script>
+        
+        var today = new Date();
+var p = today.getFullYear()
+var q = today.getMonth()
+var r = today.getDate();
+        let year= prompt(`Enter The Year You Were Born on`);
+        let month= prompt(`Enter The Month You Were Born on`);
+        let day= prompt(`Enter Your Birth Date`);
+        if(!year||!month||!day){
+          alert(`INVALID INPUT,PLEASE TRY AGAIN!`);
+        }
+        else{
+          if(confirm(`Were you born on ${year}/${month}/${day} ?`)){
+          if(q>month){
+            a=q-month;
+          }
+          else{
+            a=month-q;
+          }
+          if(r>day){
+            b=r-day;
+          }
+          else{
+            b=day-r;
+          }
+          alert(`You are currently ${p-year} Years ${a} Months ${b} Days Old.`)   
+          }
+          else{
+          alert(`Refresh The Page`);
+          }
+        
+        }
+    </script>
+</body>
